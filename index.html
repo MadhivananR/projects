@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>async and await</title>
+     
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+		
+		<style>
+			*{
+				padding: 0px;
+				margin: 0;
+				box-sizing: border-box;
+
+			}
+			body{
+				background-color: antiquewhite;
+			}
+			.content{
+				display: none;
+			}
+			.loader{
+height: 100vh;
+width: 100vw;
+overflow: hidden;
+background-color: black;
+position: absolute;
+			}
+.loader>div{
+	height: 100px;
+	width: 100px;
+	border: 15px solid #232323 ;
+	border-top-color: rgb(19, 156, 156);
+	border-left-color: rgb(55, 79, 200);
+	border-right-color: rgb(118, 55, 200);
+	border-bottom-color: rgb(200, 55, 55);
+	position: absolute;
+	margin: auto;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 50%;
+	animation: spin 1.5s infinite linear ;
+}
+
+
+@keyframes spin{
+	100%{
+		transform: rotate(360deg	);
+	}
+}
+		</style>
+
+	</head>
+	<body>
+
+			<!-- <div class="spinner-border"
+				role="status" >
+				<span class="sr-only"></span>
+			</div>
+		</div> -->
+		<div class="loader" id="loading">
+			<div>
+	
+			</div>		<span id="time" style="color: white;">0:00</span>
+		</div>
+
+
+<div class="content">
+		<h1> Employees</h1>
+	
+		<!-- <button onclick="show()"></button> -->
+
+		<table id="employees" class="table table-striped mt-5 " ;></table>
+	</div>
+		<script src="./script.js"></script>
+
+		<script>
+			$(window).on('load',function(){
+				$(".loader").fadeOut(3000);
+				$('.content').fadeIn(4000);
+			})
+		</script>
+
+	</body>
+</html>
